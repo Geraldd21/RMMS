@@ -70,9 +70,9 @@ namespace RMMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminDashFrm RDash = new AdminDashFrm();
+            Technician_Dashboard TDash = new Technician_Dashboard();
 
-            RDash.Show();
+            TDash.Show();
             this.Hide();
         }
 

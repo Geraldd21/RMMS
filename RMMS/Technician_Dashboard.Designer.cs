@@ -400,6 +400,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Technician_Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Technician_Dashboard";
             Load += Technician_Dashboard_Load;
             NavPanel.ResumeLayout(false);
