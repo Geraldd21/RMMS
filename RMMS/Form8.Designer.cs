@@ -37,7 +37,7 @@
             Dash_Butt = new Button();
             Maint_Butt = new Button();
             DGVpanel = new Panel();
-            button1 = new Button();
+            Load_Butt = new Button();
             label2 = new Label();
             from_lbl = new Label();
             To_DTP = new DateTimePicker();
@@ -45,14 +45,14 @@
             DGV_Repairlist = new DataGridView();
             Print_Btn = new Button();
             pictureBox1 = new PictureBox();
-            panel1 = new Panel();
+            Cost_pnl = new Panel();
             TotalCost_lbl = new Label();
             Total_lbl = new Label();
             NavPanel.SuspendLayout();
             DGVpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DGV_Repairlist).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
+            Cost_pnl.SuspendLayout();
             SuspendLayout();
             // 
             // NavPanel
@@ -167,7 +167,7 @@
             // DGVpanel
             // 
             DGVpanel.BackColor = Color.MintCream;
-            DGVpanel.Controls.Add(button1);
+            DGVpanel.Controls.Add(Load_Butt);
             DGVpanel.Controls.Add(label2);
             DGVpanel.Controls.Add(from_lbl);
             DGVpanel.Controls.Add(To_DTP);
@@ -178,19 +178,19 @@
             DGVpanel.Size = new Size(617, 445);
             DGVpanel.TabIndex = 17;
             // 
-            // button1
+            // Load_Butt
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(455, 17);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 32);
-            button1.TabIndex = 4;
-            button1.Text = "Load Report";
-            button1.UseVisualStyleBackColor = false;
+            Load_Butt.BackColor = Color.RoyalBlue;
+            Load_Butt.FlatAppearance.BorderSize = 0;
+            Load_Butt.FlatStyle = FlatStyle.Flat;
+            Load_Butt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Load_Butt.ForeColor = Color.White;
+            Load_Butt.Location = new Point(455, 17);
+            Load_Butt.Name = "Load_Butt";
+            Load_Butt.Size = new Size(143, 32);
+            Load_Butt.TabIndex = 4;
+            Load_Butt.Text = "Load Report";
+            Load_Butt.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -268,15 +268,15 @@
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
             // 
-            // panel1
+            // Cost_pnl
             // 
-            panel1.BackColor = Color.BlanchedAlmond;
-            panel1.Controls.Add(TotalCost_lbl);
-            panel1.Controls.Add(Total_lbl);
-            panel1.Location = new Point(342, 491);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(617, 92);
-            panel1.TabIndex = 20;
+            Cost_pnl.BackColor = Color.BlanchedAlmond;
+            Cost_pnl.Controls.Add(TotalCost_lbl);
+            Cost_pnl.Controls.Add(Total_lbl);
+            Cost_pnl.Location = new Point(342, 491);
+            Cost_pnl.Name = "Cost_pnl";
+            Cost_pnl.Size = new Size(617, 92);
+            Cost_pnl.TabIndex = 20;
             // 
             // TotalCost_lbl
             // 
@@ -307,7 +307,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.SubmitFrm;
             ClientSize = new Size(1232, 701);
-            Controls.Add(panel1);
+            Controls.Add(Cost_pnl);
             Controls.Add(pictureBox1);
             Controls.Add(Print_Btn);
             Controls.Add(DGVpanel);
@@ -316,13 +316,14 @@
             Name = "Maint_Frm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form8";
+            Load += Maint_Frm_Load;
             NavPanel.ResumeLayout(false);
             DGVpanel.ResumeLayout(false);
             DGVpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DGV_Repairlist).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Cost_pnl.ResumeLayout(false);
+            Cost_pnl.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -339,12 +340,12 @@
         private DateTimePicker To_DTP;
         private DateTimePicker From_DTP;
         private DataGridView DGV_Repairlist;
-        private Button button1;
+        private Button Load_Butt;
         private Label label2;
         private Label from_lbl;
         private Button Print_Btn;
         private PictureBox pictureBox1;
-        private Panel panel1;
+        private Panel Cost_pnl;
         private Label TotalCost_lbl;
         private Label Total_lbl;
     }

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(My_Job));
             NavPanel = new Panel();
             Logout_Butt = new Button();
-            Order_Butt = new Button();
-            Serv_Butt = new Button();
+            Update_Butt = new Button();
+            Job_Butt = new Button();
             Dash_Butt = new Button();
             NamePanel = new Panel();
             Userlbl = new Label();
@@ -40,7 +40,7 @@
             Acc_Icon = new PictureBox();
             DGV_request = new DataGridView();
             label1 = new Label();
-            button1 = new Button();
+            Start_Butt = new Button();
             NavPanel.SuspendLayout();
             NamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Acc_Icon).BeginInit();
@@ -51,8 +51,8 @@
             // 
             NavPanel.BackColor = Color.MidnightBlue;
             NavPanel.Controls.Add(Logout_Butt);
-            NavPanel.Controls.Add(Order_Butt);
-            NavPanel.Controls.Add(Serv_Butt);
+            NavPanel.Controls.Add(Update_Butt);
+            NavPanel.Controls.Add(Job_Butt);
             NavPanel.Controls.Add(Dash_Butt);
             NavPanel.Location = new Point(-21, 40);
             NavPanel.Name = "NavPanel";
@@ -72,36 +72,38 @@
             Logout_Butt.Size = new Size(277, 59);
             Logout_Butt.TabIndex = 4;
             Logout_Butt.UseVisualStyleBackColor = true;
+            Logout_Butt.Click += Logout_Butt_Click;
             // 
-            // Order_Butt
+            // Update_Butt
             // 
-            Order_Butt.BackColor = Color.Transparent;
-            Order_Butt.Cursor = Cursors.Hand;
-            Order_Butt.FlatAppearance.BorderSize = 0;
-            Order_Butt.FlatAppearance.MouseOverBackColor = Color.RoyalBlue;
-            Order_Butt.FlatStyle = FlatStyle.Flat;
-            Order_Butt.ForeColor = Color.SkyBlue;
-            Order_Butt.Image = Properties.Resources.Job_order;
-            Order_Butt.Location = new Point(45, 186);
-            Order_Butt.Name = "Order_Butt";
-            Order_Butt.Size = new Size(277, 59);
-            Order_Butt.TabIndex = 3;
-            Order_Butt.UseVisualStyleBackColor = false;
+            Update_Butt.BackColor = Color.Transparent;
+            Update_Butt.Cursor = Cursors.Hand;
+            Update_Butt.FlatAppearance.BorderSize = 0;
+            Update_Butt.FlatAppearance.MouseOverBackColor = Color.RoyalBlue;
+            Update_Butt.FlatStyle = FlatStyle.Flat;
+            Update_Butt.ForeColor = Color.SkyBlue;
+            Update_Butt.Image = Properties.Resources.Update_Repair;
+            Update_Butt.Location = new Point(45, 186);
+            Update_Butt.Name = "Update_Butt";
+            Update_Butt.Size = new Size(277, 59);
+            Update_Butt.TabIndex = 3;
+            Update_Butt.UseVisualStyleBackColor = false;
+            Update_Butt.Click += Update_Butt_Click;
             // 
-            // Serv_Butt
+            // Job_Butt
             // 
-            Serv_Butt.BackColor = Color.Transparent;
-            Serv_Butt.Cursor = Cursors.Hand;
-            Serv_Butt.FlatAppearance.BorderSize = 0;
-            Serv_Butt.FlatAppearance.MouseOverBackColor = Color.RoyalBlue;
-            Serv_Butt.FlatStyle = FlatStyle.Flat;
-            Serv_Butt.ForeColor = Color.SkyBlue;
-            Serv_Butt.Image = Properties.Resources.Service_Req;
-            Serv_Butt.Location = new Point(45, 102);
-            Serv_Butt.Name = "Serv_Butt";
-            Serv_Butt.Size = new Size(277, 59);
-            Serv_Butt.TabIndex = 2;
-            Serv_Butt.UseVisualStyleBackColor = false;
+            Job_Butt.BackColor = Color.Transparent;
+            Job_Butt.Cursor = Cursors.Hand;
+            Job_Butt.FlatAppearance.BorderSize = 0;
+            Job_Butt.FlatAppearance.MouseOverBackColor = Color.RoyalBlue;
+            Job_Butt.FlatStyle = FlatStyle.Flat;
+            Job_Butt.ForeColor = Color.SkyBlue;
+            Job_Butt.Image = Properties.Resources.My_Job;
+            Job_Butt.Location = new Point(45, 102);
+            Job_Butt.Name = "Job_Butt";
+            Job_Butt.Size = new Size(277, 59);
+            Job_Butt.TabIndex = 2;
+            Job_Butt.UseVisualStyleBackColor = false;
             // 
             // Dash_Butt
             // 
@@ -119,6 +121,7 @@
             Dash_Butt.Size = new Size(277, 59);
             Dash_Butt.TabIndex = 1;
             Dash_Butt.UseVisualStyleBackColor = false;
+            Dash_Butt.Click += Dash_Butt_Click;
             // 
             // NamePanel
             // 
@@ -193,21 +196,21 @@
             label1.TabIndex = 22;
             label1.Text = "My Assign Jobs";
             // 
-            // button1
+            // Start_Butt
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 192, 255);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(447, 628);
-            button1.Name = "button1";
-            button1.Size = new Size(649, 56);
-            button1.TabIndex = 23;
-            button1.Text = "Start Repair";
-            button1.UseVisualStyleBackColor = false;
+            Start_Butt.BackColor = Color.RoyalBlue;
+            Start_Butt.Cursor = Cursors.Hand;
+            Start_Butt.FlatAppearance.BorderSize = 0;
+            Start_Butt.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 192, 255);
+            Start_Butt.FlatStyle = FlatStyle.Flat;
+            Start_Butt.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            Start_Butt.ForeColor = Color.White;
+            Start_Butt.Location = new Point(447, 628);
+            Start_Butt.Name = "Start_Butt";
+            Start_Butt.Size = new Size(649, 56);
+            Start_Butt.TabIndex = 23;
+            Start_Butt.Text = "Start Repair";
+            Start_Butt.UseVisualStyleBackColor = false;
             // 
             // My_Job
             // 
@@ -215,7 +218,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.dashboard_bg;
             ClientSize = new Size(1232, 701);
-            Controls.Add(button1);
+            Controls.Add(Start_Butt);
             Controls.Add(label1);
             Controls.Add(DGV_request);
             Controls.Add(NamePanel);
@@ -225,6 +228,7 @@
             Name = "My_Job";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "My_Job";
+            Load += My_Job_Load;
             NavPanel.ResumeLayout(false);
             NamePanel.ResumeLayout(false);
             NamePanel.PerformLayout();
@@ -238,8 +242,8 @@
 
         private Panel NavPanel;
         private Button Logout_Butt;
-        private Button Order_Butt;
-        private Button Serv_Butt;
+        private Button Update_Butt;
+        private Button Job_Butt;
         private Button Dash_Butt;
         private Panel NamePanel;
         private Label Userlbl;
@@ -247,6 +251,6 @@
         private PictureBox Acc_Icon;
         private DataGridView DGV_request;
         private Label label1;
-        private Button button1;
+        private Button Start_Butt;
     }
 }

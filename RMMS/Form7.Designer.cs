@@ -37,7 +37,7 @@
             Serv_Butt = new Button();
             Dash_Butt = new Button();
             CreatJob_Panel = new Panel();
-            button1 = new Button();
+            Assign_Butt = new Button();
             dateTimePicker1 = new DateTimePicker();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
@@ -168,7 +168,7 @@
             // CreatJob_Panel
             // 
             CreatJob_Panel.BackColor = Color.MintCream;
-            CreatJob_Panel.Controls.Add(button1);
+            CreatJob_Panel.Controls.Add(Assign_Butt);
             CreatJob_Panel.Controls.Add(dateTimePicker1);
             CreatJob_Panel.Controls.Add(comboBox2);
             CreatJob_Panel.Controls.Add(comboBox1);
@@ -180,21 +180,21 @@
             CreatJob_Panel.Size = new Size(859, 366);
             CreatJob_Panel.TabIndex = 6;
             // 
-            // button1
+            // Assign_Butt
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 192, 255);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(595, 280);
-            button1.Name = "button1";
-            button1.Size = new Size(205, 46);
-            button1.TabIndex = 5;
-            button1.Text = "Assign Job";
-            button1.UseVisualStyleBackColor = false;
+            Assign_Butt.BackColor = Color.RoyalBlue;
+            Assign_Butt.Cursor = Cursors.Hand;
+            Assign_Butt.FlatAppearance.BorderSize = 0;
+            Assign_Butt.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 192, 255);
+            Assign_Butt.FlatStyle = FlatStyle.Flat;
+            Assign_Butt.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            Assign_Butt.ForeColor = Color.White;
+            Assign_Butt.Location = new Point(595, 280);
+            Assign_Butt.Name = "Assign_Butt";
+            Assign_Butt.Size = new Size(205, 46);
+            Assign_Butt.TabIndex = 5;
+            Assign_Butt.Text = "Assign Job";
+            Assign_Butt.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
@@ -330,6 +330,7 @@
             Name = "Order_frm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Job Orders";
+            Load += Order_frm_Load;
             NavPanel.ResumeLayout(false);
             CreatJob_Panel.ResumeLayout(false);
             CreatJob_Panel.PerformLayout();
@@ -361,7 +362,7 @@
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
-        private Button button1;
+        private Button Assign_Butt;
         private Panel Lbl_pnl;
     }
 }

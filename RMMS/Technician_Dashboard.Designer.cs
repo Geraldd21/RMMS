@@ -92,6 +92,7 @@
             Logout_Butt.Size = new Size(277, 59);
             Logout_Butt.TabIndex = 4;
             Logout_Butt.UseVisualStyleBackColor = true;
+            Logout_Butt.Click += Logout_Butt_Click;
             // 
             // Update_Butt
             // 
@@ -107,6 +108,7 @@
             Update_Butt.Size = new Size(277, 59);
             Update_Butt.TabIndex = 3;
             Update_Butt.UseVisualStyleBackColor = false;
+            Update_Butt.Click += Update_Butt_Click;
             // 
             // Job_Butt
             // 
@@ -122,6 +124,7 @@
             Job_Butt.Size = new Size(277, 59);
             Job_Butt.TabIndex = 2;
             Job_Butt.UseVisualStyleBackColor = false;
+            Job_Butt.Click += Job_Butt_Click;
             // 
             // Dash_Butt
             // 
@@ -398,6 +401,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Technician_Dashboard";
             Text = "Technician_Dashboard";
+            Load += Technician_Dashboard_Load;
             NavPanel.ResumeLayout(false);
             NamePanel.ResumeLayout(false);
             NamePanel.PerformLayout();

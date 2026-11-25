@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
@@ -13,6 +14,55 @@ namespace RMMS
         public Maint_Frm()
         {
             InitializeComponent();
+            SetRoundedCorners(20);
+            RoundPanel(NavPanel, 15);
+            RoundPanel(DGVpanel, 15);
+            RoundPanel(Cost_pnl, 15);
+            RoundButton(Load_Butt, 15);
+            RoundButton(Print_Btn, 20);
+        }
+
+        private void SetRoundedCorners(int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(Width - radius, Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, Height - radius, radius, radius, 90, 90);
+
+            path.CloseFigure();
+            Region = new Region(path);
+        }
+
+        private void RoundPanel(Panel panel, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(panel.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(panel.Width - radius, panel.Height - radius,
+                        radius, radius, 0, 90);
+            path.AddArc(0, panel.Height - radius,
+                        radius, radius, 90, 90);
+
+            path.CloseFigure();
+            panel.Region = new Region(path);
+        }
+
+        private void RoundButton(Button button, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(button.Width - radius, button.Height - radius,
+                        radius, radius, 0, 90);
+            path.AddArc(0, button.Height - radius,
+                        radius, radius, 90, 90);
+
+            path.CloseFigure();
+            button.Region = new Region(path);
         }
 
         private void Logout_Butt_Click(object sender, EventArgs e)
@@ -52,6 +102,11 @@ namespace RMMS
             Tech_Frm Technician = new Tech_Frm();
             Technician.Show();
             this.Hide();
+        }
+
+        private void Maint_Frm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
